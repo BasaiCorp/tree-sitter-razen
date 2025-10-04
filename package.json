@@ -1,0 +1,52 @@
+{
+  "name": "tree-sitter-razen",
+  "version": "0.1.0",
+  "description": "Razen grammar for tree-sitter",
+  "main": "bindings/node",
+  "types": "bindings/node",
+  "keywords": [
+    "tree-sitter",
+    "parser",
+    "razen",
+    "incremental"
+  ],
+  "author": "Razen Team",
+  "license": "MIT",
+  "dependencies": {
+    "node-addon-api": "^8.0.0",
+    "node-gyp-build": "^4.8.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.25.0",
+    "prebuildify": "^6.0.0"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree-sitter": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "install": "node-gyp-build",
+    "prestart": "tree-sitter build --wasm",
+    "start": "tree-sitter playground",
+    "test": "node --test bindings/node/*_test.js"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.razen",
+      "file-types": [
+        "rzn",
+        "rz",
+        "razen"
+      ],
+      "injection-regex": "razen",
+      "highlights": "queries/highlights.scm",
+      "locals": "queries/locals.scm",
+      "injections": "queries/injections.scm",
+      "tags": "queries/tags.scm"
+    }
+  ]
+}

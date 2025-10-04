@@ -1,0 +1,38 @@
+{
+  "grammars": [
+    {
+      "name": "razen",
+      "camelcase": "Razen",
+      "scope": "source.razen",
+      "path": ".",
+      "file-types": [
+        "rzn",
+        "rz",
+        "razen"
+      ],
+      "highlights": "queries/highlights.scm",
+      "locals": "queries/locals.scm",
+      "injections": "queries/injections.scm",
+      "tags": "queries/tags.scm"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Razen grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "Razen Team"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/razen-lang/tree-sitter-razen"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "node": true,
+    "python": true,
+    "rust": true
+  }
+}

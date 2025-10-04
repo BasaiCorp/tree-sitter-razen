@@ -1,0 +1,21 @@
+[package]
+name = "tree-sitter-razen"
+version = "0.1.0"
+description = "Razen grammar for tree-sitter"
+authors = ["Razen Team"]
+license = "MIT"
+readme = "README.md"
+keywords = ["incremental", "parsing", "razen"]
+categories = ["parsing", "text-editors"]
+repository = "https://github.com/razen-lang/tree-sitter-razen"
+edition = "2021"
+
+[lib]
+path = "bindings/rust/lib.rs"
+
+[dependencies]
+tree-sitter = "~0.22"
+tree-sitter-language = "~0.1"
+
+[build-dependencies]
+cc = "1.0"
